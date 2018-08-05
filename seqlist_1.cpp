@@ -11,8 +11,9 @@ bool del_min(SeqList &L,ELemType &value)
         for(int i=1; i<L.length; i++)
         {
             if(value>L.data[i])
+               { 
                 value=L.data[i];
-            j=i;
+                j=i;}
         }
         L.data[j]=L.data[L.length-1];
         L.length--;

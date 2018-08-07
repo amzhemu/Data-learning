@@ -1,7 +1,7 @@
 #include <memory.h>
 #include<stdio.h>
 #include"slist.h"
-/*åˆå§‹åŒ–é¡ºåºè¡¨*/
+/*³õÊ¼»¯Ë³Ğò±í*/
 int InitList(SeqList &L)
 {
     L.data=(ELemType*)malloc(InitSize*sizeof(ELemType));
@@ -12,7 +12,7 @@ int InitList(SeqList &L)
     return 1;
 }
 
-/*åœ¨ç¬¬iä¸ªä½ç½®æ’å…¥å…ƒç´ e*/
+/*ÔÚµÚi¸öÎ»ÖÃ²åÈëÔªËØe*/
 void ListInsert(SeqList &L,ELemType e,int i)
 {
     ELemType *newElem=NULL;
@@ -30,7 +30,7 @@ void ListInsert(SeqList &L,ELemType e,int i)
     L.length++;
 }
 
-/* åˆ é™¤ç¬¬iä¸ªå…ƒç´ ï¼Œå¹¶ç”¨eè¿”å›å…¶å€¼*/
+/* É¾³ıµÚi¸öÔªËØ£¬²¢ÓÃe·µ»ØÆäÖµ*/
 void ListDelete(SeqList &L,int i,ELemType&e)
 {
     if(i<1||i>L.length)exit(0);
@@ -40,19 +40,19 @@ void ListDelete(SeqList &L,int i,ELemType&e)
         L.length--;
 }
 
-/*æ±‚è¡¨é•¿*/
+/*Çó±í³¤*/
 int Length(SeqList L)
 {
     return L.length;
 }
 
-/*ç”¨eè¿”å›ç¬¬iä¸ªå…ƒç´ çš„å€¼ */
+/*ÓÃe·µ»ØµÚi¸öÔªËØµÄÖµ */
 void GetElem(SeqList L,int i,ELemType &e)
 {
     if(i<1||i>L.length)exit(0);
     e=L.data[i-1];
 }
-/* æŒ‰å€¼æŸ¥æ‰¾*/
+/* °´Öµ²éÕÒ*/
 int LocateElem(SeqList L,ELemType e)
 {
     for(int i=0;i<L.length;i++)
@@ -60,27 +60,27 @@ int LocateElem(SeqList L,ELemType e)
         return i+1;
     return 0;
 }
-/*é”€æ¯çº¿æ€§è¡¨*/
+/*Ïú»ÙÏßĞÔ±í*/
 void DestoryList(SeqList &L)
 {
     free(L.data);
     L.length=0;
     L.MaxSize=0;
 }
-/*æ¸…ç©ºçº¿æ€§è¡¨*/
+/*Çå¿ÕÏßĞÔ±í*/
 void ClearList(SeqList &L)
 {
  memset(L.data,0,sizeof(SeqList)*L.length);
  L.length=0;
 }
-/*çº¿æ€§è¡¨æ˜¯å¦ä¸ºç©º*/
+/*ÏßĞÔ±íÊÇ·ñÎª¿Õ*/
 int Empty(SeqList L)
 {
 if(L.length==0)
     return 1;
 return 0;
 }
-/*æ‰“å°çº¿æ€§è¡¨*/
+/*´òÓ¡ÏßĞÔ±í*/
 void PrintList(SeqList L)
 {
 for(int i=0;i<L.length;i++)

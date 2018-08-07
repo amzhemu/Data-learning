@@ -12,20 +12,20 @@
 typedef int ELemType;
 typedef struct
 {
-    ELemType *data;     /*åŠ¨æ€åˆ†é…æ•°ç»„çš„æŒ‡é’ˆï¼Œå­˜å‚¨åŸºå€ */
+    ELemType *data;     /*¶¯Ì¬·ÖÅäÊı×éµÄÖ¸Õë£¬´æ´¢»ùÖ· */
     int MaxSize;
-    int length; /* é¡ºåºè¡¨æœ€å¤§å®¹é‡å’Œå½“å‰ä¸ªæ•° */
-} SeqList;           /* é¡ºåºè¡¨ç±»å‹*/
+    int length; /* Ë³Ğò±í×î´óÈİÁ¿ºÍµ±Ç°¸öÊı */
+} SeqList;           /* Ë³Ğò±íÀàĞÍ*/
 
-int InitList(SeqList &L);/*åˆå§‹åŒ–çº¿æ€§è¡¨*/
-int Length(SeqList L);/*æ±‚è¡¨é•¿ï¼Œè¿”å›é¡ºåºè¡¨Lçš„é•¿åº¦ï¼Œå³æ•°æ®å…ƒç´ ä¸ªæ•°*/
-int LocateElem(SeqList L,ELemType e);/*æŒ‰å€¼æŸ¥æ‰¾*/
-void GetElem(SeqList L,int i,ELemType &e);/*æŒ‰ä½æŸ¥æ‰¾ï¼Œç”¨eè¿”å›ç¬¬iä¸ªå…ƒç´ çš„å€¼*/
-void ListInsert(SeqList &L,int i,ELemType e);/*æ’å…¥æ“ä½œ*/
-void ListDelete(SeqList &L,int i,ELemType &e);/*åˆ é™¤æ“ä½œ*/
-void DestoryList(SeqList &L);/*é”€æ¯æ“ä½œ*/
-void ClearList(SeqList &L);/*æ¸…ç©ºçº¿æ€§è¡¨*/
-void PrintList(SeqList L);/*æ‰“å°çº¿æ€§è¡¨*/
-int Empty(SeqList L);/*åˆ¤æ–­çº¿æ€§è¡¨æ˜¯å¦ä¸ºç©º*/
+int InitList(SeqList &L);/*³õÊ¼»¯ÏßĞÔ±í*/
+int Length(SeqList L);/*Çó±í³¤£¬·µ»ØË³Ğò±íLµÄ³¤¶È£¬¼´Êı¾İÔªËØ¸öÊı*/
+int LocateElem(SeqList L,ELemType e);/*°´Öµ²éÕÒ*/
+void GetElem(SeqList L,int i,ELemType &e);/*°´Î»²éÕÒ£¬ÓÃe·µ»ØµÚi¸öÔªËØµÄÖµ*/
+void ListInsert(SeqList &L,int i,ELemType e);/*²åÈë²Ù×÷*/
+void ListDelete(SeqList &L,int i,ELemType &e);/*É¾³ı²Ù×÷*/
+void DestoryList(SeqList &L);/*Ïú»Ù²Ù×÷*/
+void ClearList(SeqList &L);/*Çå¿ÕÏßĞÔ±í*/
+void PrintList(SeqList L);/*´òÓ¡ÏßĞÔ±í*/
+int Empty(SeqList L);/*ÅĞ¶ÏÏßĞÔ±íÊÇ·ñÎª¿Õ*/
 
 #endif // SLIST_H_INCLUDED
